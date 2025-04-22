@@ -7,11 +7,18 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/joke', (req, res) => {
-  const search: string|undefined = req.query.contains as string | undefined; 
+  const search: string | undefined = req.query.contains as string | undefined; 
   let url: string = 'https://v2.jokeapi.dev/joke/Any?lang=es&safe-mode';
 
-  if (search){
-    url += `&contains=${encodeURIComponent(search)}`;
+  const isValidSearch = (text: string): boolean => {
+    const trimmed = text.trim();
+    return trimmed.length >= 3 && /^[\w\sáéíóúÁÉÍÓÚñÑ.,!?-]+$/.test(trimmed);
+  };
+
+  if (search && isValidSearch(search)) {
+    url += `&contains=${encodeURIComponent(search.trim())}`;
+  } else if (search) {
+    return res.status(400).json({ error: 'Parámetro "contains" inválido. Mínimo 3 caracteres alfanuméricos.' });
   }
 
   https.get(url, (apiRes) => {
