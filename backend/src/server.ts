@@ -1,24 +1,32 @@
 import express from 'express';
 import https from 'https';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
+app.use(express.json());
 
 app.get('/joke', (req, res) => {
-  const url = 'https://v2.jokeapi.dev/joke/Any?lang=es&safe-mode';
+  const search: string|undefined = req.query.contains as string | undefined; 
+  let url: string = 'https://v2.jokeapi.dev/joke/Any?lang=es&safe-mode';
+
+  if (search){
+    url += `&contains=${encodeURIComponent(search)}`;
+  }
 
   https.get(url, (apiRes) => {
-    let data = '';
+    let data: string = '';
     apiRes.on('data', chunk => data += chunk);
     apiRes.on('end', () => {
       try {
-        const json = JSON.parse(data);
-        res.json(json); 
+        const dataJson = JSON.parse(data);
+        res.json(dataJson); 
       } catch {
         res.status(500).send('Error al parsear el chiste');
       }
     });
   }).on('error', () => {
-    res.status(500).send('Error al contactar la API');
+    res.status(500).send('API error.');
   });
 });
 
