@@ -1,6 +1,8 @@
 import express from 'express';
 import https from 'https';
 import cors from 'cors';
+import {isValidSearch} from './utils/search_validator'
+import { saveFavourite } from './utils/file_manager';
 
 const app = express();
 app.use(cors());
@@ -9,11 +11,6 @@ app.use(express.json());
 app.get('/joke', (req, res) => {
   const search: string | undefined = req.query.contains as string | undefined; 
   let url: string = 'https://v2.jokeapi.dev/joke/Any?lang=es&safe-mode';
-
-  const isValidSearch = (text: string): boolean => {
-    const trimmed = text.trim();
-    return trimmed.length >= 3 && /^[\w\sáéíóúÁÉÍÓÚñÑ.,!?-]+$/.test(trimmed);
-  };
 
   if (search && isValidSearch(search)) {
     url += `&contains=${encodeURIComponent(search.trim())}`;
@@ -39,4 +36,13 @@ app.get('/joke', (req, res) => {
 
 app.listen(3001, () => {
   console.log('Servidor backend corriendo en http://localhost:3001');
+});
+
+app.post('/joke/save', async(req, res) => {
+  try {
+    const savedJoke = await saveFavourite(req.body);
+    res.json({ mensaje: 'Chiste guardado como favorito', joke: savedJoke });
+  } catch (error) {
+    res.status(400).json({ error });
+  }
 });
