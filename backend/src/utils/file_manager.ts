@@ -43,8 +43,13 @@ export function saveFavourite(joke: Joke): Promise<Joke> {
 export function getFavourites(): Promise<Joke[]> {
   return new Promise((resolve, reject) => {
     fs.readFile(FAVORITES_PATH, 'utf-8', (err, data) => {
-      if (err && err.code !== 'ENOENT') return reject('Error leyendo favoritos');
-      if (!data) return resolve([]); // archivo vacío
+      if (err && err.code !== 'ENOENT'){
+        return reject('Error leyendo favoritos');
+      }
+
+      if (!data){
+        return resolve([]); 
+      }
 
       try {
         const favourites = JSON.parse(data);
@@ -59,8 +64,10 @@ export function getFavourites(): Promise<Joke[]> {
 export function deleteFavourite(jokeId: string): Promise<void> {
   return new Promise((resolve, reject) => {
     fs.readFile(FAVORITES_PATH, 'utf-8', (err, data) => {
-      if (err && err.code !== 'ENOENT') return reject('Error leyendo favoritos');
-
+      if (err && err.code !== 'ENOENT'){
+        return reject('Error leyendo favoritos');
+      }
+      
       let favourites: Joke[] = [];
       if (data) {
         try {

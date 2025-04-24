@@ -17,6 +17,7 @@ export const getJoke = async (searchTerm?: string): Promise<Joke> => {
   }
   return response.json();
 };
+
 export const saveJoke = async (joke: Joke): Promise<Joke> => {
   const response = await fetch(`${API_URL}/joke/save`, {
     method: 'POST',
@@ -31,3 +32,18 @@ export const saveJoke = async (joke: Joke): Promise<Joke> => {
   }
   return response.json();
 };
+
+export const getFavJokes = async (): Promise<Joke[]> => {
+  const url: string= `${API_URL}/joke/favourites`
+  console.log('Requesting favourite jokes from:', url);
+  const response = await fetch(url);
+  console.log('Response status:', response.status);
+
+  if (!response.ok) {
+    if (response.status === 500) {
+      throw new Error('Error interno del servidor. Por favor, intente nuevamente más tarde.');
+    }
+    throw new Error(`Error al obtener los chistes: ${response.status} ${response.statusText}`);
+  }
+  return response.json();
+}
