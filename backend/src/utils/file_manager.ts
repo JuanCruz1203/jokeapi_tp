@@ -39,3 +39,52 @@ export function saveFavourite(joke: Joke): Promise<Joke> {
     });
   });
 }
+
+export function getFavourites(): Promise<Joke[]> {
+  return new Promise((resolve, reject) => {
+    fs.readFile(FAVORITES_PATH, 'utf-8', (err, data) => {
+      if (err && err.code !== 'ENOENT') return reject('Error leyendo favoritos');
+      if (!data) return resolve([]); // archivo vacío
+
+      try {
+        const favourites = JSON.parse(data);
+        resolve(favourites);
+      } catch {
+        reject('Error al parsear favoritos');
+      }
+    });
+  });
+}
+
+export function deleteFavourite(jokeId: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    fs.readFile(FAVORITES_PATH, 'utf-8', (err, data) => {
+      if (err && err.code !== 'ENOENT') return reject('Error leyendo favoritos');
+
+      let favourites: Joke[] = [];
+      if (data) {
+        try {
+          favourites = JSON.parse(data);
+        } catch {
+          return reject('Error al parsear favoritos');
+        }
+      }
+
+      const newFavourites = favourites.filter(joke => joke.id !== jokeId);
+
+      if (favourites.length === newFavourites.length) {
+        return reject('Chiste no encontrado');
+      }
+
+      fs.writeFile(FAVORITES_PATH, JSON.stringify(newFavourites, null, 2), err => {
+        if (err) {
+          return reject('Error al escribir los favoritos');
+        } else {
+          resolve();
+        }
+      });
+    });
+  });
+}
+
+
