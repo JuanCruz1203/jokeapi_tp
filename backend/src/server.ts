@@ -2,9 +2,7 @@ import express from 'express';
 import https from 'https';
 import cors from 'cors';
 import {isValidSearch} from './utils/search_validator'
-import { saveFavourite } from './utils/file_manager';
-import { getFavourites } from './utils/file_manager';
-import { deleteFavourite } from './utils/file_manager';
+import { saveFavourite, deleteFavourite, getFavourites} from './utils/file_manager';
 
 const app = express();
 app.use(cors());

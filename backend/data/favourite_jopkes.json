@@ -515,5 +515,22 @@
     "safe": true,
     "id": "085fdc86-4bdf-436d-a1d5-708d91ce42a2",
     "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "No te despedirán del trabajo, si nunca comentas tu código y además eres el único que sabe cómo funciona",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "b2d9eeb9-b616-4548-9cc4-24334ea81bb7",
+    "lang": "es"
   }
 ]

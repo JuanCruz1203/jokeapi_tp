@@ -3,7 +3,7 @@ import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { Joke } from '../types';
 
-const FAVORITES_PATH = path.join(__dirname, '../../data', 'favourite_jopkes.json');
+const FAVORITES_PATH = path.join(__dirname, '../../data', 'favourite_jokes.json');
 
 export function saveFavourite(joke: Joke): Promise<Joke> {
   return new Promise((resolve, reject) => {
