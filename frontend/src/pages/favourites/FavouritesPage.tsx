@@ -4,7 +4,7 @@ import { getFavJokes, deleteFavJoke } from '../../services/joke_service';
 import './favourites.css';
 
 interface FavouritesPageProps {
-    goBack: () => void; // Definimos goBack como una propiedad
+    goBack: () => void; 
 }
 
 export const FavouritesPage: React.FC<FavouritesPageProps> = ({ goBack }) => {

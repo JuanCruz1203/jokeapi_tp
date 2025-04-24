@@ -90,11 +90,14 @@
   }
 
   .favorite-button-container {
-    position: fixed;
-    top: 42%;
+    position: absolute;
+    top: -20%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+
+  
   .joke-card {
     position: relative;
     border-radius: 8px;

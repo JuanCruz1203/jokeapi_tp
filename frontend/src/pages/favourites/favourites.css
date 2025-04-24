@@ -1,5 +1,6 @@
 .favourites-page {
     padding: 20px;
+    color:white;
   }
   
   .joke-card {
@@ -14,7 +15,7 @@
     color: white;
     border: none;
     padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
   }
   

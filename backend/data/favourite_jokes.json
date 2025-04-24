@@ -2,9 +2,8 @@
   {
     "error": false,
     "category": "Programming",
-    "type": "twopart",
-    "setup": "¿Qué es el hardware?",
-    "delivery": "El que recibe los golpes cuando falla el software.",
+    "type": "single",
+    "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
     "flags": {
       "nsfw": false,
       "religious": false,
@@ -14,43 +13,7 @@
       "explicit": false
     },
     "safe": true,
-    "id": "e163923f-de6d-4bf0-8e2d-e7eb721c6326",
-    "lang": "es"
-  },
-  {
-    "error": false,
-    "category": "Programming",
-    "type": "twopart",
-    "setup": "¿Qué es un terapeuta?",
-    "delivery": "1024 Gigapeutas",
-    "flags": {
-      "nsfw": false,
-      "religious": false,
-      "political": false,
-      "racist": false,
-      "sexist": false,
-      "explicit": false
-    },
-    "safe": true,
-    "id": "63d9fbbb-3bcd-4402-9b10-311269f00fc8",
-    "lang": "es"
-  },
-  {
-    "error": false,
-    "category": "Programming",
-    "type": "twopart",
-    "setup": "¿Qué le dice un .GIF a un .JPEG?",
-    "delivery": "Anímate viejo.",
-    "flags": {
-      "nsfw": false,
-      "religious": false,
-      "political": false,
-      "racist": false,
-      "sexist": false,
-      "explicit": false
-    },
-    "safe": true,
-    "id": "0c012a4d-e079-4dbb-ae9a-94abafc7f189",
+    "id": "3bdab547-fd68-4ff7-ac3a-55fc6bac4930",
     "lang": "es"
   }
 ]
