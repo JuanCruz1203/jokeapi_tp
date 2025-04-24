@@ -91,7 +91,7 @@
 
   .favorite-button-container {
     position: fixed;
-    top: 45%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -106,3 +106,4 @@
     align-items: center;
     margin: 3rem;
   }
+

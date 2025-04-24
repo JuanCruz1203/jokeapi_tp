@@ -47,3 +47,15 @@ export const getFavJokes = async (): Promise<Joke[]> => {
   }
   return response.json();
 }
+
+export const deleteFavJoke = async (id: string): Promise<void> => {
+  const url = `${API_URL}/joke/favourites/${id}`;
+  console.log('Deleting favourite joke from:', url);
+  const response = await fetch(url, {
+    method: 'DELETE',
+  });
+
+  if (!response.ok) {
+    throw new Error('Error al eliminar el chiste favorito');
+  }
+};

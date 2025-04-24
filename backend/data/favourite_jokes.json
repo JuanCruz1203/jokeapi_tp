@@ -34,5 +34,23 @@
     "safe": true,
     "id": "63d9fbbb-3bcd-4402-9b10-311269f00fc8",
     "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué le dice un .GIF a un .JPEG?",
+    "delivery": "Anímate viejo.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "0c012a4d-e079-4dbb-ae9a-94abafc7f189",
+    "lang": "es"
   }
 ]
