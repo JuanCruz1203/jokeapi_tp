@@ -562,5 +562,337 @@
     "safe": true,
     "id": "08449986-040a-4b1d-bc5f-243f393fe160",
     "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué es el hardware?",
+    "delivery": "El que recibe los golpes cuando falla el software.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "a063b00c-35a0-4994-80a3-7cb15cbc9871",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué es un terapeuta?",
+    "delivery": "1024 Gigapeutas",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "92e8f1fb-e680-4516-9d27-25e990323a2b",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "bdd34177-d0da-4935-a263-20b4aa7e132a",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "f5567d7c-2079-4954-88b2-01e830233cc8",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "f6c8a5db-ae5e-4b84-826d-3b96a3c966b8",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué es un terapeuta?",
+    "delivery": "1024 Gigapeutas",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "48f410a5-6c09-4fa4-ba61-666213057426",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué es un terapeuta?",
+    "delivery": "1024 Gigapeutas",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "e0a3ffeb-dd44-49f2-a104-5195e0b3f43e",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Por qué C consigue todas las chicas y Java no tiene ninguna?",
+    "delivery": "Porque C no las trata como objetos.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "d517f9a5-4ede-4ac4-8cb0-6f9abda98c42",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué le dice un .GIF a un .JPEG?",
+    "delivery": "Anímate viejo.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "d2a95cca-e938-4c7f-b4f7-79fce7fc23ff",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "No te despedirán del trabajo, si nunca comentas tu código y además eres el único que sabe cómo funciona",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "07ab4973-b29f-4d4c-96ce-1278964802f7",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "No te despedirán del trabajo, si nunca comentas tu código y además eres el único que sabe cómo funciona",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "5c2ac170-6e34-4c41-8d8c-74fab9be56e4",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Por qué C consigue todas las chicas y Java no tiene ninguna?",
+    "delivery": "Porque C no las trata como objetos.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "ca20c42b-17e9-47dc-bd9a-c3f951aaa4bc",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué le dice un .GIF a un .JPEG?",
+    "delivery": "Anímate viejo.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "0d7458ae-0634-43e8-9052-aeb4cbf114b9",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Por qué C consigue todas las chicas y Java no tiene ninguna?",
+    "delivery": "Porque C no las trata como objetos.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "ed8f0987-40a1-4689-b126-437ce9c1942a",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "6f86de21-6f09-43a2-9053-f5a0c27b5637",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "2a442544-45bc-4265-9ce3-b5e82cd0ba52",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "No te despedirán del trabajo, si nunca comentas tu código y además eres el único que sabe cómo funciona",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "83a78467-465d-4097-a2c9-cf4d961fcddc",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "No te despedirán del trabajo, si nunca comentas tu código y además eres el único que sabe cómo funciona",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "5876aad0-fc09-420b-953d-54ceb8171d52",
+    "lang": "es"
+  },
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "No te despedirán del trabajo, si nunca comentas tu código y además eres el único que sabe cómo funciona",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "23a666f5-a5ca-45a4-bd2a-056f6e1ef8ea",
+    "lang": "es"
   }
 ]
