@@ -3,6 +3,8 @@ import https from 'https';
 import cors from 'cors';
 import {isValidSearch} from './utils/search_validator'
 import { saveFavourite } from './utils/file_manager';
+import { getFavourites } from './utils/file_manager';
+import { deleteFavourite } from './utils/file_manager';
 
 const app = express();
 app.use(cors());
@@ -42,6 +44,26 @@ app.post('/joke/save', async(req, res) => {
   try {
     const savedJoke = await saveFavourite(req.body);
     res.json({ mensaje: 'Chiste guardado como favorito', joke: savedJoke });
+  } catch (error) {
+    res.status(400).json({ error });
+  }
+});
+
+app.get('/joke/favourites', async (req, res) => {
+  try {
+    const favourites = await getFavourites();
+    res.json(favourites);
+  } catch (error) {
+    res.status(500).json({ error: 'Error al obtener los favoritos' });
+  }
+});
+
+app.delete('/joke/favourites/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    await deleteFavourite(id);
+    res.json({ mensaje: 'Chiste eliminado de favoritos' });
   } catch (error) {
     res.status(400).json({ error });
   }

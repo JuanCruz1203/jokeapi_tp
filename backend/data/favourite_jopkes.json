@@ -37,24 +37,6 @@
   {
     "error": false,
     "category": "Programming",
-    "type": "twopart",
-    "setup": "¿Por qué C consigue todas las chicas y Java no tiene ninguna?",
-    "delivery": "Porque C no las trata como objetos.",
-    "flags": {
-      "nsfw": false,
-      "religious": false,
-      "political": false,
-      "racist": false,
-      "sexist": false,
-      "explicit": false
-    },
-    "safe": true,
-    "id": "5288f600-dec5-40f8-b2b1-3ab4b82ae189",
-    "lang": "es"
-  },
-  {
-    "error": false,
-    "category": "Programming",
     "type": "single",
     "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
     "flags": {
@@ -155,23 +137,6 @@
     },
     "safe": true,
     "id": "01873b15-289a-4c9a-bf26-1277afafbba7",
-    "lang": "es"
-  },
-  {
-    "error": false,
-    "category": "Programming",
-    "type": "single",
-    "joke": "Sólo hay 10 tipos de personas en este mundo, las que entienden binario y las que no.",
-    "flags": {
-      "nsfw": false,
-      "religious": false,
-      "political": false,
-      "racist": false,
-      "sexist": false,
-      "explicit": false
-    },
-    "safe": true,
-    "id": "b540b0ae-0a8d-4566-9e87-77778efe9516",
     "lang": "es"
   },
   {
@@ -492,22 +457,10 @@
     "lang": "es"
   },
   {
-    "error": false,
-    "category": "Programming",
     "type": "twopart",
-    "setup": "¿Qué es el hardware?",
-    "delivery": "El que recibe los golpes cuando falla el software.",
-    "flags": {
-      "nsfw": false,
-      "religious": false,
-      "political": false,
-      "racist": false,
-      "sexist": false,
-      "explicit": false
-    },
-    "safe": true,
-    "id": "50a0da28-806f-4f30-84c5-c92d789ef5d5",
-    "lang": "es"
+    "setup": "¿Por qué C consigue todas las chicas y Java no tiene ninguna?",
+    "delivery": "Porque C no las trata como objetos.",
+    "id": "443f0eb6-d35c-46e9-bda1-6a39f266f7cd"
   },
   {
     "error": false,
@@ -524,15 +477,15 @@
       "explicit": false
     },
     "safe": true,
-    "id": "e69b60ca-9f22-42d9-98c4-4c8f9b3cee12",
+    "id": "65df738e-ec45-4ada-a086-92656bfc5205",
     "lang": "es"
   },
   {
     "error": false,
     "category": "Programming",
     "type": "twopart",
-    "setup": "¿Qué le dice un .GIF a un .JPEG?",
-    "delivery": "Anímate viejo.",
+    "setup": "¿Qué es el hardware?",
+    "delivery": "El que recibe los golpes cuando falla el software.",
     "flags": {
       "nsfw": false,
       "religious": false,
@@ -542,15 +495,15 @@
       "explicit": false
     },
     "safe": true,
-    "id": "919ad4eb-eb63-4bf0-9199-272c83169895",
+    "id": "7a041d0b-0937-4bd9-aa27-a7b113f044a3",
     "lang": "es"
   },
   {
     "error": false,
     "category": "Programming",
     "type": "twopart",
-    "setup": "¿Qué le dice un .GIF a un .JPEG?",
-    "delivery": "Anímate viejo.",
+    "setup": "¿Qué es un terapeuta?",
+    "delivery": "1024 Gigapeutas",
     "flags": {
       "nsfw": false,
       "religious": false,
@@ -560,7 +513,7 @@
       "explicit": false
     },
     "safe": true,
-    "id": "08449986-040a-4b1d-bc5f-243f393fe160",
+    "id": "085fdc86-4bdf-436d-a1d5-708d91ce42a2",
     "lang": "es"
   }
 ]
