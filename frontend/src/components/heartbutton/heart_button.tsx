@@ -31,7 +31,7 @@ export default function FavoriteButton({ onClick }: FavoriteButtonProps) {
         src="https://lottie.host/23d3d7cc-60c2-4acb-8541-2b412690a56a/PGaZYWO5Wb.lottie"
         background="transparent"
         speed="1"
-        style={{ width: "80px", height: "80px" }}
+        style={{ width: "80px", height: "80px", filter: "brightness(0) invert(1)" }}
         loop={false}
         autoplay={false}
       ></dotlottie-player>
