@@ -1,13 +1,19 @@
 import { Joke } from '@shared/types';
 const API_URL = 'http://localhost:3001';
+
 export const getJoke = async (searchTerm?: string): Promise<Joke> => {
   const url = searchTerm 
     ? `${API_URL}/joke?contains=${encodeURIComponent(searchTerm)}`
     : `${API_URL}/joke`;
     
+  console.log('Requesting joke from:', url);
   const response = await fetch(url);
+  console.log('Response status:', response.status);
   if (!response.ok) {
-    throw new Error('Error al obtener el chiste');
+    if (response.status === 500) {
+      throw new Error('Error interno del servidor. Por favor, intente nuevamente más tarde.');
+    }
+    throw new Error(`Error al obtener el chiste: ${response.status} ${response.statusText}`);
   }
   return response.json();
 };
