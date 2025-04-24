@@ -21,7 +21,7 @@
   }
 
   .joke-card p{
-    color: red;
+    color: #fff;
   }
 
   .joke-content {
@@ -35,7 +35,6 @@
     font-style: italic;
   }
   .save-button {
-    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -44,14 +43,15 @@
     transition: background-color 0.3s;
   }
   .save-button:hover {
-    background-color: #45a049;
+    background-color: #a704bd;
+    color: #fff;
   }
 
   .App {
     max-width: 600px;
     min-height: 700px;
-    background: #ffffff;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(230, 230, 230, 1) 100%);
+    background: #cd30db;
+    background: linear-gradient(180deg, rgba(205, 48, 219, 1) 0%, rgba(0, 163, 160, 1) 100%);
     margin: 5.5rem auto;
     padding: 2rem;
     text-align: center;
@@ -60,20 +60,20 @@
     align-items: center;
     justify-content: center;
     color: #000000;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 24px rgb(10, 160, 180, .5);
     border-radius: 8px;
   }
   .App h1 {
     font-size: 2.5rem;
-    color: #000000;
+    color: #e0e0e0;
     margin-bottom: 2rem;
     font-family: "Ramabhadra", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
   .new-joke-button {
-    background-color: #5a5a5a;
-    color: #ffffff;
+    background-color: #e7e7e7;
+    color: #cd30db;
     border: none;
     padding: 1rem 2rem;
     border-radius: 500px;
@@ -83,8 +83,25 @@
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
-  .new-joke-button:hover {
-    background-color: #1ed760;
-    transform: scale(1.04);
+
+  .favorite-button-container {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .joke-card {
+    position: relative;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
   }
