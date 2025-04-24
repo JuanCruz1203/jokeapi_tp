@@ -20,7 +20,7 @@ export default function FavoriteButton({ onClick }: FavoriteButtonProps) {
       playerRef.current.play();
     }
     if (onClick) {
-      onClick(); // ejecuta la función que viene como prop
+      onClick();
     }
   };
 

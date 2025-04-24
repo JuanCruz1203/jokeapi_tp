@@ -7,7 +7,7 @@ exports.deleteFavourite = exports.getFavourites = exports.saveFavourite = void 0
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const uuid_1 = require("uuid");
-const FAVORITES_PATH = path_1.default.join(__dirname, '../../data', 'favourite_jopkes.json');
+const FAVORITES_PATH = path_1.default.join(__dirname, '../../data', 'favourite_jokes.json');
 function saveFavourite(joke) {
     return new Promise((resolve, reject) => {
         fs_1.default.readFile(FAVORITES_PATH, 'utf-8', (err, data) => {
@@ -45,10 +45,12 @@ exports.saveFavourite = saveFavourite;
 function getFavourites() {
     return new Promise((resolve, reject) => {
         fs_1.default.readFile(FAVORITES_PATH, 'utf-8', (err, data) => {
-            if (err && err.code !== 'ENOENT')
+            if (err && err.code !== 'ENOENT') {
                 return reject('Error leyendo favoritos');
-            if (!data)
-                return resolve([]); // archivo vacío
+            }
+            if (!data) {
+                return resolve([]);
+            }
             try {
                 const favourites = JSON.parse(data);
                 resolve(favourites);
@@ -63,8 +65,9 @@ exports.getFavourites = getFavourites;
 function deleteFavourite(jokeId) {
     return new Promise((resolve, reject) => {
         fs_1.default.readFile(FAVORITES_PATH, 'utf-8', (err, data) => {
-            if (err && err.code !== 'ENOENT')
+            if (err && err.code !== 'ENOENT') {
                 return reject('Error leyendo favoritos');
+            }
             let favourites = [];
             if (data) {
                 try {

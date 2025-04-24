@@ -1,0 +1,20 @@
+[
+  {
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "¿Qué es el hardware?",
+    "delivery": "El que recibe los golpes cuando falla el software.",
+    "flags": {
+      "nsfw": false,
+      "religious": false,
+      "political": false,
+      "racist": false,
+      "sexist": false,
+      "explicit": false
+    },
+    "safe": true,
+    "id": "e163923f-de6d-4bf0-8e2d-e7eb721c6326",
+    "lang": "es"
+  }
+]
