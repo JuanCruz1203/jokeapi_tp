@@ -10,16 +10,18 @@ function App() {
   const fetchNewJoke = async () => {
     try {
       setError(null);
+      console.log('Fetching new joke...');
       const joke = await getJoke();
+      console.log('Received joke:', joke);
       setCurrentJoke(joke);
     } catch (err) {
+      console.error('Error fetching joke:', err);
       setError('Error al obtener el chiste');
     }
   };
   const handleSaveJoke = async (joke: Joke) => {
     try {
       await saveJoke(joke);
-      alert('¡Chiste guardado con éxito!');
     } catch (err) {
       alert('Error al guardar el chiste');
     }
@@ -29,7 +31,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <h1>Generador de Chistes</h1>
+      <h1>GENERADOR DE CHISTES</h1>
       
       {error && <div className="error">{error}</div>}
       

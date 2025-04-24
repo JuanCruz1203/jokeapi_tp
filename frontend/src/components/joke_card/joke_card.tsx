@@ -1,6 +1,7 @@
 import React from 'react';
 import { Joke } from '@shared/types';
 import './joke_card.css';
+import FavoriteButton from "../heartbutton/heart_button";
 interface JokeCardProps {
   joke: Joke;
   onSave?: (joke: Joke) => void;
@@ -13,6 +14,9 @@ export const JokeCard: React.FC<JokeCardProps> = ({ joke, onSave }) => {
   };
   return (
     <div className="joke-card">
+      <div className="favorite-button-container">
+        <FavoriteButton onClick={handleSave} />
+      </div>
       {joke.type === 'single' ? (
         <div className="joke-content">
           <p>{joke.joke}</p>
@@ -22,11 +26,6 @@ export const JokeCard: React.FC<JokeCardProps> = ({ joke, onSave }) => {
           <p className="setup">{joke.setup}</p>
           <p className="delivery">{joke.delivery}</p>
         </div>
-      )}
-      {onSave && (
-        <button onClick={handleSave} className="save-button">
-          Guardar como favorito
-        </button>
       )}
     </div>
   );
