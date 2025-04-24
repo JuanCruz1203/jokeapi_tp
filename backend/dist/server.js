@@ -17,6 +17,8 @@ const https_1 = __importDefault(require("https"));
 const cors_1 = __importDefault(require("cors"));
 const search_validator_1 = require("./utils/search_validator");
 const file_manager_1 = require("./utils/file_manager");
+const file_manager_2 = require("./utils/file_manager");
+const file_manager_3 = require("./utils/file_manager");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
@@ -52,6 +54,25 @@ app.post('/joke/save', (req, res) => __awaiter(void 0, void 0, void 0, function*
     try {
         const savedJoke = yield (0, file_manager_1.saveFavourite)(req.body);
         res.json({ mensaje: 'Chiste guardado como favorito', joke: savedJoke });
+    }
+    catch (error) {
+        res.status(400).json({ error });
+    }
+}));
+app.get('/joke/favourites', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const favourites = yield (0, file_manager_2.getFavourites)();
+        res.json(favourites);
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Error al obtener los favoritos' });
+    }
+}));
+app.delete('/joke/favourites/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { id } = req.params;
+    try {
+        yield (0, file_manager_3.deleteFavourite)(id);
+        res.json({ mensaje: 'Chiste eliminado de favoritos' });
     }
     catch (error) {
         res.status(400).json({ error });
