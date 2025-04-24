@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -6,17 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const https_1 = __importDefault(require("https"));
 const cors_1 = __importDefault(require("cors"));
+const search_validator_1 = require("./utils/search_validator");
+const file_manager_1 = require("./utils/file_manager");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.get('/joke', (req, res) => {
     const search = req.query.contains;
     let url = 'https://v2.jokeapi.dev/joke/Any?lang=es&safe-mode';
-    const isValidSearch = (text) => {
-        const trimmed = text.trim();
-        return trimmed.length >= 3 && /^[\w\sáéíóúÁÉÍÓÚñÑ.,!?-]+$/.test(trimmed);
-    };
-    if (search && isValidSearch(search)) {
+    if (search && (0, search_validator_1.isValidSearch)(search)) {
         url += `&contains=${encodeURIComponent(search.trim())}`;
     }
     else if (search) {
@@ -41,3 +48,12 @@ app.get('/joke', (req, res) => {
 app.listen(3001, () => {
     console.log('Servidor backend corriendo en http://localhost:3001');
 });
+app.post('/joke/save', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const savedJoke = yield (0, file_manager_1.saveFavourite)(req.body);
+        res.json({ mensaje: 'Chiste guardado como favorito', joke: savedJoke });
+    }
+    catch (error) {
+        res.status(400).json({ error });
+    }
+}));
